@@ -41,6 +41,10 @@ static const unsigned char used_bit[] = {
 	4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8             /*240 ~ 255*/
 };
 
+#ifndef ALIGN_DOWN
+#define ALIGN_DOWN(x, a) __ALIGN_KERNEL((x) - ((a) - 1), (a))
+#endif 
+
 /*
  *  Allocation Bitmap Management Functions
  */
