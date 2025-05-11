@@ -1004,7 +1004,7 @@ static int __init gf_init(void)
 	return 0;
 }
 
-module_init(gf_init);
+late_initcall(gf_init);
 
 static void __exit gf_exit(void)
 {
